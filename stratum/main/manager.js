@@ -77,9 +77,9 @@ const Manager = function(config, configMain) {
     const nTimeInt = parseInt(submission.nTime, 16);
 
     // Establish Hashing Algorithms
-    const headerDigest = Algorithms.sha256d.hash();
-    const coinbaseDigest = Algorithms.sha256d.hash();
-    const blockDigest = Algorithms.sha256d.hash();
+    const headerDigest = Algorithms.flex.hash();
+    const coinbaseDigest = Algorithms.sha3d.hash();
+    const blockDigest = Algorithms.sha3d.hash();
 
     // Share is Invalid
     const shareError = function(error) {
@@ -151,9 +151,9 @@ const Manager = function(config, configMain) {
     const headerBigInt = utils.bufferToBigInt(utils.reverseBuffer(headerHash));
 
     // Calculate Share Difficulty
-    const shareMultiplier = Algorithms.sha256d.multiplier;
-    const shareDiff = Algorithms.sha256d.diff / Number(headerBigInt) * shareMultiplier;
-    const blockDiffAdjusted = job.difficulty * Algorithms.sha256d.multiplier;
+    const shareMultiplier = Algorithms.flex.multiplier;
+    const shareDiff = Algorithms.flex.diff / Number(headerBigInt) * shareMultiplier;
+    const blockDiffAdjusted = job.difficulty * Algorithms.flex.multiplier;
     const blockHash = utils.reverseBuffer(blockDigest(headerBuffer, submission.nTime)).toString('hex');
     const blockHex = job.handleBlocks(headerBuffer, coinbaseBuffer).toString('hex');
 

@@ -11,30 +11,30 @@ const Transactions = function(config, rpcData) {
 
   // Mainnet Configuration
   this.configMainnet = {
-    bech32: 'bc',
+    bech32: 'kc',
     bip32: {
       public: Buffer.from('0488B21E', 'hex').readUInt32LE(0),
       private: Buffer.from('0488ADE4', 'hex').readUInt32LE(0),
     },
-    peerMagic: 'f9beb4d9',
-    pubKeyHash: Buffer.from('00', 'hex').readUInt8(0),
-    scriptHash: Buffer.from('05', 'hex').readUInt8(0),
-    wif: Buffer.from('80', 'hex').readUInt8(0),
-    coin: 'btc',
+    peerMagic: 'd392fb0e',
+    pubKeyHash: Buffer.from('1C', 'hex').readUInt8(0),
+    scriptHash: Buffer.from('1A', 'hex').readUInt8(0),
+    wif: Buffer.from('41', 'hex').readUInt8(0),
+    coin: 'kcn',
   };
 
   // Testnet Configuration
   this.configTestnet = {
-    bech32: 'tb',
+    bech32: 'tkc',
     bip32: {
-      public: Buffer.from('043587CF', 'hex').readUInt32LE(0),
-      private: Buffer.from('04358394', 'hex').readUInt32LE(0),
+      public: Buffer.from('045F1CF6', 'hex').readUInt32LE(0),
+      private: Buffer.from('045F18BC', 'hex').readUInt32LE(0),
     },
     peerMagic: '0b110907',
-    pubKeyHash: Buffer.from('6F', 'hex').readUInt8(0),
-    scriptHash: Buffer.from('C4', 'hex').readUInt8(0),
-    wif: Buffer.from('EF', 'hex').readUInt8(0),
-    coin: 'btc',
+    pubKeyHash: Buffer.from('26', 'hex').readUInt8(0),
+    scriptHash: Buffer.from('21', 'hex').readUInt8(0),
+    wif: Buffer.from('A8', 'hex').readUInt8(0),
+    coin: 'kcn',
   };
 
   // Calculate Generation Transaction
