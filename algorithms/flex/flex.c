@@ -22,7 +22,7 @@
 #include "utils/sph_fugue.h"
 #include "utils/sph_shabal.h"
 #include "utils/sph_whirlpool.h"
-#include "../sha3d/utils/sph_sha2.h"
+#include "../sha256d/utils/sph_sha2.h"
 #include "utils/sph_haval.h"
 #include "utils/sph_tiger.h"
 #include "utils/lyra2.h"
